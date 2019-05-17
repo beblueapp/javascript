@@ -1,4 +1,4 @@
-# eslint-config-airbnb
+# @beblueapp/eslint-config-react
 
 [![npm version](https://badge.fury.io/js/eslint-config-airbnb.svg)](http://badge.fury.io/js/eslint-config-airbnb)
 
