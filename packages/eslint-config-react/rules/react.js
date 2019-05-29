@@ -1,8 +1,3 @@
-const assign = require('object.assign');
-const baseStyleRules = require('eslint-config-airbnb-base/rules/style').rules;
-
-const dangleRules = baseStyleRules['no-underscore-dangle'];
-
 module.exports = {
   plugins: [
     'react',
@@ -17,13 +12,9 @@ module.exports = {
   // View link below for react rules documentation
   // https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
   rules: {
-    'no-underscore-dangle': [dangleRules[0], assign({}, dangleRules[1], {
-      allow: dangleRules[1].allow.concat(['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__']),
-    })],
-
     // Specify whether double or single quotes should be used in JSX attributes
     // https://eslint.org/docs/rules/jsx-quotes
-    'jsx-quotes': ['error', 'prefer-double'],
+    'jsx-quotes': ['error', 'prefer-single'],
 
     'class-methods-use-this': ['error', {
       exceptMethods: [
@@ -42,7 +33,7 @@ module.exports = {
         'componentDidUpdate',
         'componentWillUnmount',
         'componentDidCatch',
-        'getSnapshotBeforeUpdate'
+        'getSnapshotBeforeUpdate',
       ],
     }],
 
@@ -221,7 +212,7 @@ module.exports = {
     'react/prop-types': ['error', {
       ignore: [],
       customValidators: [],
-      skipUndeclared: false
+      skipUndeclared: false,
     }],
 
     // Prevent missing React when using JSX
@@ -275,7 +266,7 @@ module.exports = {
         ],
         rendering: [
           '/^render.+$/',
-          'render'
+          'render',
         ],
       },
     }],
@@ -310,7 +301,7 @@ module.exports = {
 
     // only .jsx files may have JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-    'react/jsx-filename-extension': ['error', { extensions: ['.jsx'] }],
+    'react/jsx-filename-extension': ['error', { extensions: ['.js'] }],
 
     // prevent accidental JS comments from being injected into JSX as text
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
@@ -334,7 +325,7 @@ module.exports = {
 
     // Forbid certain elements
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-elements.md
-    'react/forbid-elements': ['off', { forbid: [], }],
+    'react/forbid-elements': ['off', { forbid: [] }],
 
     // Prevent problem with children and props.dangerouslySetInnerHTML
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
@@ -470,17 +461,17 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.json']
-      }
+        extensions: ['.js', '.jsx', '.json'],
+      },
     },
     react: {
       pragma: 'React',
-      version: '16.0'
+      version: '16.0',
     },
     propWrapperFunctions: [
       'forbidExtraProps', // https://www.npmjs.com/package/airbnb-prop-types
       'exact', // https://www.npmjs.com/package/prop-types-exact
       'Object.freeze', // https://tc39.github.io/ecma262/#sec-object.freeze
     ],
-  }
-};
+  },
+}

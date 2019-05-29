@@ -29,5 +29,8 @@
   "homepage": "https://github.com/beblueapp/javascript",
   "devDependencies": {
     "lerna": "^3.14.1"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

@@ -1,7 +1,7 @@
 module.exports = {
   plugins: [
     'jsx-a11y',
-    'react'
+    'react',
   ],
 
   parserOptions: {
@@ -63,7 +63,7 @@ module.exports = {
       labelAttributes: [],
       controlComponents: [],
       assert: 'both',
-      depth: 25
+      depth: 25,
     }],
 
     // require that mouseover/out come with focus/blur, for keyboard-only users
@@ -132,7 +132,7 @@ module.exports = {
         'onKeyPress',
         'onKeyDown',
         'onKeyUp',
-      ]
+      ],
     }],
 
     // A non-interactive element does not support event handlers (mouse and key handlers)
@@ -145,7 +145,7 @@ module.exports = {
         'onKeyPress',
         'onKeyDown',
         'onKeyUp',
-      ]
+      ],
     }],
 
     // ensure emoji are accessible
@@ -207,4 +207,4 @@ module.exports = {
       aspects: ['noHref', 'invalidHref', 'preferButton'],
     }],
   },
-};
+}
