@@ -7,7 +7,6 @@ module.exports = {
     './rules/variables',
     './rules/es6',
     './rules/imports',
-    'eslint-config-standard'
   ].map(require.resolve),
   parserOptions: {
     ecmaVersion: 2018,
@@ -15,4 +14,5 @@ module.exports = {
   },
   rules: {
     strict: 'error',
-  }}
+  },
+}

@@ -72,7 +72,7 @@ module.exports = {
         'arrowFunctions',
         'functions',
         'methods',
-      ]
+      ],
     }],
 
     // disallow empty destructuring patterns
@@ -187,7 +187,7 @@ module.exports = {
         'response', // for Express responses
         '$scope', // for Angular 1 scopes
         'staticContext', // for ReactRouter context
-      ]
+      ],
     }],
 
     // disallow usage of __proto__ property
@@ -335,6 +335,6 @@ module.exports = {
     'wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
 
     // require or disallow Yoda conditions
-    yoda: 'error'
-  }
-};
+    yoda: 'error',
+  },
+}

@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    node: true
+    node: true,
   },
 
   rules: {
@@ -12,7 +12,7 @@ module.exports = {
     'global-require': 'error',
 
     // enforces error handling in callbacks (node environment)
-    'handle-callback-err': 'off',
+    'handle-callback-err': ['error', '^(err|error)$'],
 
     // disallow use of the Buffer() constructor
     // https://eslint.org/docs/rules/no-buffer-constructor
@@ -39,5 +39,5 @@ module.exports = {
 
     // disallow use of synchronous methods (off by default)
     'no-sync': 'off',
-  }
-};
+  },
+}

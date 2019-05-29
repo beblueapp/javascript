@@ -65,7 +65,7 @@ module.exports = {
         ObjectPattern: false,
         VariableDeclaration: false,
         NewExpression: false,
-      }
+      },
     }],
 
     // disallow padding inside computed properties
@@ -86,7 +86,7 @@ module.exports = {
     // https://eslint.org/docs/rules/func-name-matching
     // TODO: semver-major (eslint 5): add considerPropertyDescriptor: true
     'func-name-matching': ['off', 'always', {
-      includeCommonJSModuleExports: false
+      includeCommonJSModuleExports: false,
     }],
 
     // require function expressions to have a name
@@ -123,30 +123,22 @@ module.exports = {
       SwitchCase: 1,
       VariableDeclarator: 1,
       outerIIFEBody: 1,
-      // MemberExpression: null,
-      FunctionDeclaration: {
-        parameters: 1,
-        body: 1
-      },
-      FunctionExpression: {
-        parameters: 1,
-        body: 1
-      },
-      CallExpression: {
-        arguments: 1
-      },
+      MemberExpression: 1,
+      FunctionDeclaration: { parameters: 1, body: 1 },
+      FunctionExpression: { parameters: 1, body: 1 },
+      CallExpression: { arguments: 1 },
       ArrayExpression: 1,
       ObjectExpression: 1,
       ImportDeclaration: 1,
       flatTernaryExpressions: false,
       // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
       ignoredNodes: ['JSXElement', 'JSXElement > *', 'JSXAttribute', 'JSXIdentifier', 'JSXNamespacedName', 'JSXMemberExpression', 'JSXSpreadAttribute', 'JSXExpressionContainer', 'JSXOpeningElement', 'JSXClosingElement', 'JSXText', 'JSXEmptyExpression', 'JSXSpreadChild'],
-      ignoreComments: false
+      ignoreComments: false,
     }],
 
     // specify whether double or single quotes should be used in JSX attributes
     // https://eslint.org/docs/rules/jsx-quotes
-    'jsx-quotes': ['off', 'prefer-double'],
+    'jsx-quotes': ['off', 'prefer-single'],
 
     // enforces spacing between keys and values in object literal properties
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
@@ -158,8 +150,8 @@ module.exports = {
       overrides: {
         return: { after: true },
         throw: { after: true },
-        case: { after: true }
-      }
+        case: { after: true },
+      },
     }],
 
     // enforce position of line comments
@@ -207,7 +199,7 @@ module.exports = {
     'max-lines': ['off', {
       max: 300,
       skipBlankLines: true,
-      skipComments: true
+      skipComments: true,
     }],
 
     // enforce a maximum function length
@@ -300,9 +292,9 @@ module.exports = {
         ['&', '|', '^', '~', '<<', '>>', '>>>'],
         ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
         ['&&', '||'],
-        ['in', 'instanceof']
+        ['in', 'instanceof'],
       ],
-      allowSamePrecedence: false
+      allowSamePrecedence: false,
     }],
 
     // disallow mixed spaces and tabs for indentation
@@ -364,15 +356,6 @@ module.exports = {
     'no-trailing-spaces': ['error', {
       skipBlankLines: false,
       ignoreComments: false,
-    }],
-
-    // disallow dangling underscores in identifiers
-    // https://eslint.org/docs/rules/no-underscore-dangle
-    'no-underscore-dangle': ['error', {
-      allow: [],
-      allowAfterThis: false,
-      allowAfterSuper: false,
-      enforceInMethodNames: true,
     }],
 
     // disallow the use of Boolean literals in conditional expressions
@@ -450,8 +433,8 @@ module.exports = {
     // https://eslint.org/docs/rules/require-jsdoc
     'require-jsdoc': 'off',
 
-    // require or disallow use of semicolons instead of ASI
-    semi: ['error', 'always'],
+    // disallow use of semicolons in favor of ASI
+    semi: ['error', 'never'],
 
     // enforce spacing before and after semicolons
     'semi-spacing': ['error', { before: false, after: true }],
@@ -474,7 +457,7 @@ module.exports = {
     'space-before-function-paren': ['error', {
       anonymous: 'always',
       named: 'never',
-      asyncArrow: 'always'
+      asyncArrow: 'always',
     }],
 
     // require or disallow spaces inside parentheses
@@ -503,7 +486,7 @@ module.exports = {
         exceptions: ['-', '+'],
         markers: ['=', '!'], // space here to support sprockets directives
         balanced: true,
-      }
+      },
     }],
 
     // Enforce spacing around colons of switch statements
@@ -519,6 +502,6 @@ module.exports = {
     'unicode-bom': ['error', 'never'],
 
     // require regex literals to be wrapped in parentheses
-    'wrap-regex': 'off'
-  }
-};
+    'wrap-regex': 'off',
+  },
+}

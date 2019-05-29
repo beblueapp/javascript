@@ -1,25 +1,24 @@
 module.exports = {
   env: {
-    es6: true
+    es6: true,
   },
   parserOptions: {
     ecmaVersion: 6,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: [
-    'import'
+    'import',
   ],
 
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.mjs', '.js', '.json']
-      }
+        extensions: ['.mjs', '.js', '.json'],
+      },
     },
     'import/extensions': [
       '.js',
       '.mjs',
-      '.jsx',
     ],
     'import/core-modules': [
     ],
@@ -258,4 +257,4 @@ module.exports = {
       unusedExports: true,
     }],
   },
-};
+}
