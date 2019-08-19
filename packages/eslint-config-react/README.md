@@ -10,7 +10,6 @@ Our default export contains ESLint rules related to React. It requires `eslint`,
 
 1. Install the correct versions of each package, which are listed by the command:
 
-
   ```sh
   npx install-peerdeps --dev @beblueapp/eslint-config-base
   ```
@@ -34,3 +33,7 @@ Our default export contains ESLint rules related to React. It requires `eslint`,
   ```
 
 2. Add `"extends": "@beblueapp/eslint-config-react"` to your .eslintrc
+
+### @beblueapp/eslint-config-react/hooks
+
+This entry point enables the linting rules for React hooks (requires v16.8+). To use, add "extends": ["@beblueapp/eslint-config-react", "@beblueapp/eslint-config-react/hooks"] to your .eslintrc
