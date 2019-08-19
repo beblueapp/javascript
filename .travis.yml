@@ -18,3 +18,6 @@ deploy:
   provider: script
   script: yarn lerna publish from-package --yes
   skip_cleanup: true
+  on:
+    branch: master
+    node_js: "10"
