@@ -1,6 +1,6 @@
 {
   "name": "@beblueapp/eslint-config-base",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Beblue's base JS ESLint config, following our styleguide",
   "main": "index.js",
   "repository": {
